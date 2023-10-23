@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Welcome to the portfolio. You can browse my collection of web projects, find out my contacts or write me a message to discuss your ideas."
+      lang="en"
+    />
+    <meta
+      name="description"
+      content="Ласкаво просимо до портфоліо. Ви можете ознайомитися з колекцією моїх веб-проектів, дізнатися мої контакти або написати мені повідомлення, щоб обговорити ваші ідеї."
+      lang="ua"
+    />
+    <meta
+      name="keywords"
+      content="Solonar Oleksandr, front-end development, web development, portfolio, projects, HTML, CSS, JavaScript, React"
+      lang="en"
+    />
+
+    <meta
+      name="keywords"
+      content="Солонар Олександр фронтенд-розробка, веб-розробка, портфоліо, проекти, HTML, CSS, JavaScript, React"
+      lang="ua"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
