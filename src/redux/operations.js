@@ -1,13 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://146.190.118.121/api';
+axios.defaults.baseURL = 'https://technical-task-api.icapgroupgmbh.com/api';
 
 export const fetchContacts = createAsyncThunk(
   '/table/',
-  async (_, thunkAPI) => {
+  async (offset, thunkAPI) => {
     try {
-      const response = await axios.get('/table');
+      const response = await axios.get(`/table/?limit=10&offset=${offset}`);
       return response.data.results;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
@@ -15,24 +15,15 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
-export const addContact = createAsyncThunk(
-  'contacts/addContact',
-  async (newContact, thunkAPI) => {
+export const editContact = createAsyncThunk(
+  'contacts/editContact',
+  async (updatedContact, thunkAPI) => {
     try {
-      const response = await axios.post('/contacts', newContact);
+      const response = await axios.put(
+        `/table/${updatedContact.id}/`,
+        updatedContact
+      );
       return response.data.results;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
-    }
-  }
-);
-
-export const deleteContact = createAsyncThunk(
-  'contacts/deleteContact',
-  async (contactId, thunkAPI) => {
-    try {
-      const response = await axios.delete(`/contacts/${contactId}`);
-      return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }

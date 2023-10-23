@@ -1,9 +1,47 @@
 .loader {
   position: absolute;
-
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-weight: 700;
 }
 
 .error {
   font-weight: 700;
+  color: red;
+}
+
+.buttonContainer {
+  max-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+.decreaseButton {
+  background-color: #ff5733;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.decreaseButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.increaseButton {
+  background-color: #517e16;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.increaseButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
