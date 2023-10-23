@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/test-task-authorization/static/css/main.ac836bab.css",
-    "main.js": "/test-task-authorization/static/js/main.f74f42cf.js",
-    "static/css/926.d00f8470.chunk.css": "/test-task-authorization/static/css/926.d00f8470.chunk.css",
-    "static/js/926.0e5bacef.chunk.js": "/test-task-authorization/static/js/926.0e5bacef.chunk.js",
+    "main.css": "/test-task-authorization/static/css/main.98199c50.css",
+    "main.js": "/test-task-authorization/static/js/main.f3a0e6dc.js",
+    "static/css/926.2b5f37d0.chunk.css": "/test-task-authorization/static/css/926.2b5f37d0.chunk.css",
+    "static/js/926.8da81b94.chunk.js": "/test-task-authorization/static/js/926.8da81b94.chunk.js",
     "static/css/651.1c71dd12.chunk.css": "/test-task-authorization/static/css/651.1c71dd12.chunk.css",
     "static/js/651.d164088d.chunk.js": "/test-task-authorization/static/js/651.d164088d.chunk.js",
     "static/js/568.7016c42b.chunk.js": "/test-task-authorization/static/js/568.7016c42b.chunk.js",
     "index.html": "/test-task-authorization/index.html",
-    "main.ac836bab.css.map": "/test-task-authorization/static/css/main.ac836bab.css.map",
-    "main.f74f42cf.js.map": "/test-task-authorization/static/js/main.f74f42cf.js.map",
-    "926.d00f8470.chunk.css.map": "/test-task-authorization/static/css/926.d00f8470.chunk.css.map",
-    "926.0e5bacef.chunk.js.map": "/test-task-authorization/static/js/926.0e5bacef.chunk.js.map",
+    "main.98199c50.css.map": "/test-task-authorization/static/css/main.98199c50.css.map",
+    "main.f3a0e6dc.js.map": "/test-task-authorization/static/js/main.f3a0e6dc.js.map",
+    "926.2b5f37d0.chunk.css.map": "/test-task-authorization/static/css/926.2b5f37d0.chunk.css.map",
+    "926.8da81b94.chunk.js.map": "/test-task-authorization/static/js/926.8da81b94.chunk.js.map",
     "651.1c71dd12.chunk.css.map": "/test-task-authorization/static/css/651.1c71dd12.chunk.css.map",
     "651.d164088d.chunk.js.map": "/test-task-authorization/static/js/651.d164088d.chunk.js.map",
     "568.7016c42b.chunk.js.map": "/test-task-authorization/static/js/568.7016c42b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac836bab.css",
-    "static/js/main.f74f42cf.js"
+    "static/css/main.98199c50.css",
+    "static/js/main.f3a0e6dc.js"
   ]
 }
