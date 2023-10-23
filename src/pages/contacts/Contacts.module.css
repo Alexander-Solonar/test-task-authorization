@@ -1,0 +1,9 @@
+.loader {
+  position: absolute;
+
+  font-weight: 700;
+}
+
+.error {
+  font-weight: 700;
+}
