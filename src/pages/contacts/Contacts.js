@@ -15,8 +15,6 @@ const Contacts = () => {
 
   return (
     <div>
-      <h1>Phonebook</h1>
-      <h2>Contacts</h2>
       {items.length === 0 && <h2>No added numbers!</h2>}
       {items.length > 0 && <Filter />}
       {isLoading && <p className={css.loader}>Loading...</p>}

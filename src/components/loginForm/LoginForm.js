@@ -38,11 +38,25 @@ const LoginForm = () => {
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
-        <Form className={css.form} autoComplete="off">
-          <Field className={css.input} type="text" name="username" />
-          <FormError name="username" />
-          <Field className={css.input} type="password" name="password" />
-          <FormError name="password" />
+        <Form className={css.form}>
+          <div className={css.label}>
+            <Field
+              className={css.input}
+              type="text"
+              name="username"
+              placeholder="Username"
+            />
+            <FormError name="username" />
+          </div>
+          <div className={css.label}>
+            <Field
+              className={css.input}
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+            <FormError name="password" />
+          </div>
           <button className={css.button} type="submit">
             Log in
           </button>

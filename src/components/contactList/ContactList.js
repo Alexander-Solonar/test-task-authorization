@@ -11,23 +11,38 @@ const ContactList = () => {
   return (
     <div>
       {data.length === 0 && <h2>Сontact not found!</h2>}
-      <ul className={css.list}>
-        {data.map(({ id, name, number }) => (
-          <li key={id} className={css.item}>
-            <span className={css.name}>{name}:</span>
-            <span className={css.number}> {number}</span>
-            <button
-              className={css.button}
-              type="button"
-              onClick={() => {
-                dispatch(deleteContact(id));
-              }}
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Birthday_date</th>
+            <th colSpan="2"> Phone_number</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map(({ id, name, email, birthday_date, phone_number }) => (
+            <tr key={id} className={css.item}>
+              <td>{name}</td>
+              <td>{email}</td>
+              <td>{birthday_date}</td>
+              <td>{phone_number}</td>
+              <td>
+                <button
+                  className={css.button}
+                  type="button"
+                  onClick={() => {
+                    dispatch(deleteContact(id));
+                  }}
+                >
+                  Edit
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
