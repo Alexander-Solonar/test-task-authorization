@@ -18,12 +18,19 @@ const handleFulfilledFetch = (state, action) => {
 const handleFulfilledEdit = (state, action) => {
   state.isLoading = false;
   state.error = null;
+
   const updatedContact = action.payload;
-  const updatedIndex = state.items.findIndex(
-    contact => contact.id === updatedContact.id
-  );
-  if (updatedIndex !== -1) {
-    state.items[updatedIndex] = updatedContact;
+  if (updatedContact && updatedContact.id) {
+    const updatedIndex = state.items.findIndex(
+      contact => contact.id === updatedContact.id
+    );
+    if (updatedIndex !== -1) {
+      state.items = [
+        ...state.items.slice(0, updatedIndex),
+        updatedContact,
+        ...state.items.slice(updatedIndex + 1),
+      ];
+    }
   }
 };
 

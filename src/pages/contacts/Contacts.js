@@ -6,7 +6,7 @@ import css from './Contacts.module.css';
 import Filter from 'components/filter';
 
 const Contacts = () => {
-  const [offset, setOffset] = useState(10);
+  const [offset, setOffset] = useState(0);
   const { items, isLoading, error } = useSelector(state => state.contacts);
   const dispatch = useDispatch();
 
@@ -14,10 +14,10 @@ const Contacts = () => {
     dispatch(fetchContacts(offset));
   }, [dispatch, offset]);
 
-  const handleIncreasePage = () => {
+  const handleNextPage = () => {
     setOffset(prevState => prevState + 10);
   };
-  const handleDecreasePage = () => {
+  const handlePrevPage = () => {
     setOffset(prevState => prevState - 10);
   };
 
@@ -30,19 +30,19 @@ const Contacts = () => {
       {items.length > 0 && (
         <div className={css.buttonContainer}>
           <button
-            className={css.decreaseButton}
-            onClick={handleDecreasePage}
-            disabled={offset === 10}
+            className={css.prevButton}
+            onClick={handlePrevPage}
+            disabled={offset === 0}
           >
-            decrease
+            prev
           </button>
 
           <button
-            className={css.increaseButton}
-            onClick={handleIncreasePage}
-            disabled={offset === 50}
+            className={css.nextButton}
+            onClick={handleNextPage}
+            disabled={items.length < 10}
           >
-            increase
+            next
           </button>
         </div>
       )}

@@ -8,6 +8,7 @@ export const fetchContacts = createAsyncThunk(
   async (offset, thunkAPI) => {
     try {
       const response = await axios.get(`/table/?limit=10&offset=${offset}`);
+
       return response.data.results;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
@@ -19,11 +20,11 @@ export const editContact = createAsyncThunk(
   'contacts/editContact',
   async (updatedContact, thunkAPI) => {
     try {
-      const response = await axios.put(
+      const response = await axios.patch(
         `/table/${updatedContact.id}/`,
         updatedContact
       );
-      return response.data.results;
+      return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }

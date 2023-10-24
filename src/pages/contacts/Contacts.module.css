@@ -18,7 +18,7 @@
   margin: 30px auto;
 }
 
-.decreaseButton {
+.prevButton {
   background-color: #ff5733;
   color: #fff;
   border: none;
@@ -27,12 +27,12 @@
   border-radius: 4px;
 }
 
-.decreaseButton:disabled {
+.prevButton:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }
 
-.increaseButton {
+.nextButton {
   background-color: #517e16;
   color: #fff;
   border: none;
@@ -41,7 +41,7 @@
   border-radius: 4px;
 }
 
-.increaseButton:disabled {
+.nextButton:disabled {
   background-color: #ccc;
   cursor: not-allowed;
 }

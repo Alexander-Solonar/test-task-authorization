@@ -3,11 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { editContact } from 'redux/operations';
 import { selectVisibleContacts } from 'redux/selectors';
 import css from './ContactList.module.css';
+import EditForm from './editForm/EditForm';
 
 const ContactList = () => {
   const dispatch = useDispatch();
   const data = useSelector(selectVisibleContacts);
   const [editedContact, setEditedContact] = useState(null);
+
   const handleEditClick = contact => {
     setEditedContact(contact);
   };
@@ -17,7 +19,7 @@ const ContactList = () => {
 
     if (parts.length === 3) {
       const [day, month, year] = parts;
-      return `${year}-${month}-${day}`;
+      return `19${year}-${month}-${day}`;
     }
     return dateString;
   };
@@ -31,14 +33,14 @@ const ContactList = () => {
         ...editedContact,
         birthday_date: formattedBirthday,
       };
-      console.log(updatedContact);
+
       dispatch(editContact(updatedContact));
       setEditedContact(null);
     }
   };
 
   return (
-    <div>
+    <div className={css.container}>
       {data.length === 0 && <h2>Contact not found!</h2>}
 
       <table>
@@ -80,47 +82,11 @@ const ContactList = () => {
       </table>
 
       {editedContact && (
-        <div>
-          <h2>Edit Contact</h2>
-          <input
-            type="text"
-            value={editedContact.name}
-            onChange={e =>
-              setEditedContact({ ...editedContact, name: e.target.value })
-            }
-          />
-          <input
-            type="email"
-            value={editedContact.email}
-            onChange={e =>
-              setEditedContact({ ...editedContact, email: e.target.value })
-            }
-          />
-          <input
-            type="text"
-            value={editedContact.birthday_date}
-            onChange={e =>
-              setEditedContact({
-                ...editedContact,
-                birthday_date: e.target.value,
-              })
-            }
-          />
-          <input
-            type="text"
-            value={editedContact.phone_number}
-            onChange={e =>
-              setEditedContact({
-                ...editedContact,
-                phone_number: e.target.value,
-              })
-            }
-          />
-
-          <button type="button" onClick={handleSaveEdit}>
-            Save
-          </button>
-        </div>
+        <EditForm
+          editedContact={editedContact}
+          setEditedContact={setEditedContact}
+          handleSaveEdit={handleSaveEdit}
+        />
       )}
     </div>
   );
