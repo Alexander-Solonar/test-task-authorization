@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test-task-authorization/static/css/main.98199c50.css",
-    "main.js": "/test-task-authorization/static/js/main.f2e8c710.js",
+    "main.js": "/test-task-authorization/static/js/main.0b3fae1e.js",
     "static/css/457.6fb0836b.chunk.css": "/test-task-authorization/static/css/457.6fb0836b.chunk.css",
     "static/js/457.969defaa.chunk.js": "/test-task-authorization/static/js/457.969defaa.chunk.js",
     "static/css/651.1c71dd12.chunk.css": "/test-task-authorization/static/css/651.1c71dd12.chunk.css",
@@ -9,7 +9,7 @@
     "static/js/568.7016c42b.chunk.js": "/test-task-authorization/static/js/568.7016c42b.chunk.js",
     "index.html": "/test-task-authorization/index.html",
     "main.98199c50.css.map": "/test-task-authorization/static/css/main.98199c50.css.map",
-    "main.f2e8c710.js.map": "/test-task-authorization/static/js/main.f2e8c710.js.map",
+    "main.0b3fae1e.js.map": "/test-task-authorization/static/js/main.0b3fae1e.js.map",
     "457.6fb0836b.chunk.css.map": "/test-task-authorization/static/css/457.6fb0836b.chunk.css.map",
     "457.969defaa.chunk.js.map": "/test-task-authorization/static/js/457.969defaa.chunk.js.map",
     "651.1c71dd12.chunk.css.map": "/test-task-authorization/static/css/651.1c71dd12.chunk.css.map",
@@ -18,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.98199c50.css",
-    "static/js/main.f2e8c710.js"
+    "static/js/main.0b3fae1e.js"
   ]
 }
