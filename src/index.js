@@ -9,7 +9,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="test-task-authorization/">
+    <BrowserRouter basename="test-task-authorization">
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <App />
