@@ -20,6 +20,7 @@ export const login = createAsyncThunk(
       token.set(data.token);
       return data;
     } catch (error) {
+      alert(error.response.data.error);
       return thunkAPI.rejectWithValue(error.message);
     }
   }

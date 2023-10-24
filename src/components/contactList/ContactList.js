@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { editContact } from 'redux/operations';
 import { selectVisibleContacts } from 'redux/selectors';
 import css from './ContactList.module.css';
-import EditForm from './editForm/EditForm';
+import EditForm from '../editForm/EditForm';
 
 const ContactList = () => {
   const dispatch = useDispatch();

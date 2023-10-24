@@ -22,7 +22,7 @@ const Contacts = () => {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       {items.length > 0 && <Filter />}
       {isLoading && <p className={css.loader}>Loading...</p>}
       {error && <p className={css.error}>{error}</p>}
@@ -34,7 +34,7 @@ const Contacts = () => {
             onClick={handlePrevPage}
             disabled={offset === 0}
           >
-            prev
+            {offset > 0 ? `page ${offset / 10}` : 'page'}
           </button>
 
           <button
@@ -42,7 +42,7 @@ const Contacts = () => {
             onClick={handleNextPage}
             disabled={items.length < 10}
           >
-            next
+            page {offset / 10 + 2}
           </button>
         </div>
       )}

@@ -1,9 +1,14 @@
+.container {
+  position: relative;
+}
+
 .loader {
   position: absolute;
-  top: 50%;
+  bottom: 15px;
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 700;
+  color: red;
 }
 
 .error {
