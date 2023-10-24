@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import css from './EditForm.module.css';
 
 const EditForm = ({ editedContact, setEditedContact, handleSaveEdit }) => {
@@ -46,6 +47,17 @@ const EditForm = ({ editedContact, setEditedContact, handleSaveEdit }) => {
       </button>
     </div>
   );
+};
+
+EditForm.propTypes = {
+  editedContact: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+    birthday_date: PropTypes.string,
+    phone_number: PropTypes.string,
+  }).isRequired,
+  setEditedContact: PropTypes.func.isRequired,
+  handleSaveEdit: PropTypes.func.isRequired,
 };
 
 export default EditForm;
